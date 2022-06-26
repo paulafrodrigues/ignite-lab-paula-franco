@@ -2,10 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-.title {
-  @apply  text-5xl font-bold text-purple-500
+body {
+  @apply bg-gray-900 text-gray-100;
+  -webkit-font-smoothing: antialiased;
 }
 
-body {
-  @apply bg-zinc-900 text-zinc-100
+.logo {
+  @apply w-full py-5 flex items-center justify-center bg-gray-700 border-b border-gray-600
+}
+
+.main {
+  @apply flex flex-1
+}
+
+.eventHeader {
+  @apply flex flex-col min-h-screen
+}
+
+.video {
+  @apply flex-1
+}
+
+.sidebar {
+  @apply w-[348px] bg-gray-700 p-6 border-l border-gray-600
+}
+.sidebarTitle {
+  @apply font-bold text-2xl pb-6  mb-6 border-b border-gray-500 block
+}
+.sidebarLessons {
+  @apply flex flex-col gap-8
+}
+
+.lessonData {
+  @apply text-gray-300
+}
+.lessonHeaderBox {
+  @apply rounded border border-gray-500 p-4 mt-2
+}
+.lessonHeader {
+  @apply flex items-center justify-between
+}
+.lessonStatusOn {
+  @apply text-sm text-blue-500 font-medium flex items-center gap-2
+}
+.lessonStatusOff {
+  @apply text-sm text-orange-500 font-medium flex items-center gap-2
+}
+
+.lessonTime {
+  @apply text-xs rounded py-[0.125rem] px-2 text-white border border-green-300 font-bold
+}
+.lessonTitle {
+  @apply text-gray-200 mt-5 block
 }
