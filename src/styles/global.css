@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/*corpo do site*/
+
 body {
   @apply bg-gray-900 text-gray-100;
   -webkit-font-smoothing: antialiased;
@@ -11,6 +13,8 @@ body {
   @apply w-full py-5 flex items-center justify-center bg-gray-700 border-b border-gray-600
 }
 
+/*papgina principal*/
+
 .main {
   @apply flex flex-1
 }
@@ -19,9 +23,83 @@ body {
   @apply flex flex-col min-h-screen
 }
 
+/*parte dos videos*/
+
 .video {
   @apply flex-1
 }
+.videoBorder {
+  @apply bg-black flex justify-center
+}
+.videoDisplay {
+  @apply h-full w-full max-w-[1100px] max-h-[60vh] aspect-video
+}
+.videoDescription {
+  @apply p-8 max-w-[1100px] mx-auto
+}
+.videoDescritptionContent {
+  @apply flex items-start gap-16
+}
+.videoDescriptionText {
+  @apply flex-1
+}
+.descriptionTitle {
+  @apply text-2xl font-bold
+}
+.videoDescriptionText {
+  @apply mt-4 text-gray-200 leading-relaxed
+}
+.descriptionTeacher {
+  @apply flex items-center gap-4 mt-6
+}
+.imgTeacher {
+  @apply h-16 w-16 rounded-full border-2 border-blue-500
+}
+.contentTeacher {
+  @apply leading-relaxed
+}
+.nameTeacher {
+  @apply font-bold text-2xl block
+}
+.bioTeacher {
+  @apply text-gray-200 text-sm block
+}
+.videoLinks {
+  @apply flex flex-col gap-4
+}
+.firstLink {
+  @apply p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors
+}
+.secondLink {
+  @apply p-4 text-sm border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors
+}
+
+.videoComplements {
+  @apply gap-8 mt-20 grid grid-cols-2
+}
+.firstLinkComplement {
+  @apply bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors
+}
+.firstLinkIcon {
+  @apply bg-green-700 h-full p-6 flex items-center
+}
+.firstLinkText {
+  @apply py-6 leading-relaxed
+}
+.firstLinkTextTitle {
+  @apply text-2xl
+}
+.firstLinkTextDescription {
+  @apply text-sm text-gray-200 mt-2
+}
+.firstLinkArrow {
+  @apply h-full p-6 flex items-center
+}
+
+.secondLinkComplement {
+  @apply gap-8 mt-20 grid grid-cols-2
+}
+/*parte da sidebar*/
 
 .sidebar {
   @apply w-[348px] bg-gray-700 p-6 border-l border-gray-600
@@ -33,11 +111,13 @@ body {
   @apply flex flex-col gap-8
 }
 
+/*especificacoes das licoes*/
+
 .lessonData {
   @apply text-gray-300
 }
 .lessonHeaderBox {
-  @apply rounded border border-gray-500 p-4 mt-2
+  @apply rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500
 }
 .lessonHeader {
   @apply flex items-center justify-between
