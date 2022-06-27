@@ -1,7 +1,8 @@
 import { CheckCircle, Lock } from 'phosphor-react'
 import { isPast, format } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import classNames from 'classnames'
 
 interface LessonProps {
   title: string;
@@ -10,12 +11,15 @@ interface LessonProps {
   type: 'live' | 'class';
 }
 
-
 export function Lesson(props: LessonProps) {
+  const {slug} = useParams<{slug: string}>()
+
   const isLessonAvailable = isPast(props.availableAt)
   const availableDateFormatted = format(props.availableAt, "EEEE' • 'd' de 'MMM' • 'k'h'mm", {
     locale: ptBR
   })
+
+  const isActiveLesson = slug === props.slug
 
   return (
     <Link to={`/event/lesson/${props.slug}`} className="group">
@@ -23,7 +27,10 @@ export function Lesson(props: LessonProps) {
         {availableDateFormatted}
       </span>
 
-      <div className="lessonHeaderBox">
+      <div 
+        className={classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500', {'bg-green-500': isActiveLesson
+
+        })}>
         <header className="lessonHeader">
         {isLessonAvailable ? (
                     <span className="lessonStatusOn">
@@ -31,7 +38,10 @@ export function Lesson(props: LessonProps) {
                     Conteudo liberado
                     </span>
         ) : (
-          <span className="lessonStatusOff">
+          <span className={classNames('text-xs rounded py-[0.125rem] px-2 text-white border font-bold', {
+            'border-white': isActiveLesson,
+            'border-green-300': !isActiveLesson
+          })}>
           <Lock size={20}/>
           Em breve
           </span>
@@ -40,7 +50,10 @@ export function Lesson(props: LessonProps) {
             {props.type == 'live' ? 'AO VIVO' : 'AULA PRATICA'}
             </span>
         </header>
-        <strong className="lessonTitle">
+        <strong className={classNames('mt-5 block', {
+          'text-white': isActiveLesson,
+          'text-gray-200': !isActiveLesson
+        })}>
           {props.title}
           </strong>
       </div>
