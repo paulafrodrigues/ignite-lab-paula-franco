@@ -66,7 +66,7 @@ export function Subscribe() {
         </div>
 
       </div>
-      <img src="/src/assets/code-mockup.png" className="subscribeMockup" alt="" />
+      <img src="/public/image/code-mockup.png" className="subscribeMockup" alt="" />
     </div>
   );
 }
