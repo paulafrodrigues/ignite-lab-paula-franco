@@ -29,4 +29,4 @@ This project was made by Paula Franco for the event Ignite Lab by [Rocketseat](h
 
 ## Result
 
-```https://ignite-lab-paula-franco.vercel.app/``
+https://ignite-lab-paula-franco.vercel.app/
