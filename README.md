@@ -15,7 +15,8 @@ The objective of this project is to create a event plataform were the classes of
 ## Techs
 - [React JS](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
-- [Tailwind CSS/PostCSS](https://tailwindcss.com / https://postcss.org/)
+- [Tailwind CSS](https://tailwindcss.com)
+- [PostCss](https://postcss.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [GraphQL](https://graphql.org/)
 - [Apollo](https://www.apollographql.com/)
