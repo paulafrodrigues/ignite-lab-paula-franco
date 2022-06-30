@@ -171,3 +171,56 @@ body {
 .lessonTitle {
   @apply text-gray-200 mt-5 block
 }
+
+/* Footer */
+
+.footer {
+  @apply bg-gray-900 w-full  
+}
+
+.footerBox{
+  @apply flex flex-col items-center gap-6 py-4 border-t border-gray-500 text-gray-300 text-sm mx-4 
+}
+
+.footerLogo {
+  @apply max-w-[1100px] w-full
+}
+
+.footerLogoBox {
+  @apply flex flex-col items-center gap-6 /* large-tablet:flex-row*/
+}
+/* subscribe responsive */
+
+@media (min-width:360px) and (max-width: 640px){
+
+  .subscribeBackground {
+    @apply flex-col px-6 items-center
+  }
+  
+  .subscribeElements {
+    @apply flex flex-col
+  }
+
+  .subscribeText {
+    @apply items-center justify-center my-12
+  }
+
+  .subscribeTextTitle {
+    @apply text-3xl text-center
+  }
+
+  .subscribeTextDescription {
+    @apply text-center
+  }
+
+  .subscribeForm {
+    @apply w-screen
+  }
+
+  .footer {
+    @apply w-full
+  }
+
+}
+
+/* tablet:mx-8 large-tablet:flex-row large-tablet:justify-between */
